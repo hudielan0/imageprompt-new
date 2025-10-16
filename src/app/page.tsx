@@ -10,7 +10,7 @@ export default function Home() {
 
   // 处理文件选择
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];  // ✅ 修复：改为 files?.[0]
+    const file = e.target.files?.[0];
     
     if (file) {
       if (!file.type.startsWith('image/')) {
@@ -43,7 +43,7 @@ export default function Home() {
       const formData = new FormData();
       formData.append('image', selectedFile);
 
-      const response = await fetch('/api/analyze', {
+      const response = await fetch('/api/analyze-image', {
         method: 'POST',
         body: formData,
       });
