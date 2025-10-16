@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
 
     // 初始化 Google Generative AI
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-pro-vision' });
 
     // 构建提示词
     const prompt = `请仔细分析这张图片，并生成一个详细的英文提示词（prompt），用于AI图像生成工具。
